@@ -1,0 +1,234 @@
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+/* Hide scrollbar (Chrome, Safari) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar (Firefox) */
+html {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar (IE/Edge legacy) */
+body {
+  margin: 0;
+   -ms-overflow-style: none;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always; /* 👈 makes snapping stronger */
+}
+
+h1 {
+  color: var(--text-h);
+  font-weight: 500;
+  font-size: 100px;
+  margin-bottom: 40px;
+}
+
+.introText {
+  font-size: 40px;
+  color: black;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: var(--text-h);
+  font-weight: 500;
+  font-size: 70px;
+  margin-bottom: 30px;
+}
+
+.dayText {
+  font-size: 35px;
+  color: rgb(106, 106, 106);
+  margin-bottom: 30px;
+}
+
+h3 {
+  color: var(--text-h);
+  font-weight: 500;
+  font-size: 70px;
+  margin-bottom: 0px;
+}
+
+h4 {
+  color: var(--text-h);
+  font-weight: 500;
+  font-size: 27px;
+  margin-bottom: 7px;
+}
+
+.weekText {
+  font-size: 22px;
+  color: gray;
+  margin-bottom: 5px;
+}
+
+.conclText {
+  font-size: 30px;
+  color: rgb(52, 52, 52);
+  margin-bottom: 30px;
+}
+
+.refText {
+  font-size: 22px;
+  color: rgb(52, 52, 52);
+  margin-bottom: 30px;
+}
+
+
+
+
+/* For custom scroll bar */
+
+.scrollIndicator {
+  position: fixed;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  opacity: 0;
+  transition: opacity 1s ease 0.5s, transform 1s ease 0.5s;
+}
+
+.scrollIndicator.show {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: 6px 0;
+  transition: all 0.2s ease;
+}
+
+/* hover effect */
+.dot:hover {
+  transform: scale(1.7);
+  cursor: pointer;
+}
+
+.dot.active {
+  width: 14px;
+  height: 14px;
+  background: black;
+}
+
+/* active one shouldnt have a hover effect */
+.dot.active:hover {
+  transform: none;
+}
+
+
+
+
+
+/* For arrow at the bottom of intro screen */
+
+.scrollHint {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  color: gray;
+  opacity: 0.7;
+
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 8px);
+  }
+}
+
+
+/* For hover over bold text */
+b {
+  transition: transform 0.2s ease;
+  display: inline-block; /* 👈 required for transform */
+}
+
+b:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+/* For definition tooltips */
+.tooltip {
+  position: fixed;
+  transform: translate(-50%, 0);
+  background: #555;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 18px;
+  pointer-events: none;
+  z-index: 1000;
+
+  /* 👇 NEW */
+  max-width: 270px;
+  width: max-content;
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: center;
+
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* 👇 fade in */
+.tooltip.show {
+  opacity: 1;
+}
+
+/* 👇 fade out */
+.tooltip.hide {
+  opacity: 0;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  top: -12px; /* 👈 places it above the box */
+  left: 50%;
+  transform: translateX(-50%);
+
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent #7d7d7d transparent;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
