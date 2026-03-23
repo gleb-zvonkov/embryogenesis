@@ -125,6 +125,7 @@ function App() {
           textAlign: "center",
           scrollSnapAlign: "start",
           padding: "20px 40px",
+          overflowY: "auto",
         }}
         id="intro"
       >
@@ -638,7 +639,7 @@ function App() {
               definition="A thickened region of cells in the early embryo that helps establish the cranial end of the embryo."
               setTooltip={setTooltip}
             >
-              prechordal plate
+              Prechordal plate
             </Term>{" "}
             appears in the hypoblast.
           </>,
@@ -1433,7 +1434,7 @@ function App() {
                   definition="A temporary connection between the midgut and the umbilical vesicle in the early embryo."
                   setTooltip={setTooltip}
                 >
-                  omphaloenteric duct
+                  Omphaloenteric duct
                 </Term>{" "}
                 degenerates.
               </>,
@@ -1457,7 +1458,7 @@ function App() {
                   definition="The light-sensitive layer of the eye that detects light and converts it into signals sent to the brain."
                   setTooltip={setTooltip}
                 >
-                  retina
+                  Retina
                 </Term>{" "}
                 develops.
               </>,
@@ -1472,7 +1473,7 @@ function App() {
                   definition="A process of bone formation where bone develops directly from mesenchymal tissue without a cartilage model."
                   setTooltip={setTooltip}
                 >
-                  intramembranous ossification
+                  Intramembranous ossification
                 </Term>{" "}
                 begins.
               </>,
@@ -1481,7 +1482,7 @@ function App() {
                   definition="A process of bone formation where bone develops by replacing a cartilage model."
                   setTooltip={setTooltip}
                 >
-                  endochondral ossification
+                  Endochondral ossification
                 </Term>{" "}
                 continues.
               </>,
@@ -1699,9 +1700,6 @@ function App() {
       >
         {tooltip.text}
       </div>
-
-
-
     </div>
   );
 }
