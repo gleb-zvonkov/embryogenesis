@@ -20,5 +20,5 @@ An interactive web app that visualizes embryonic development from fertilization 
 Most images used in this project are fully or partially generated using the DALL·E model.
 
 ## Deployed on Github Pages
-npm run build
-npm run deploy
+`npm run build`                              
+`npm run deploy`

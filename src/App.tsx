@@ -863,7 +863,7 @@ function App() {
               definition="A group of cells that form at the edges of the neural folds and migrate throughout the embryo to form various structures."
               setTooltip={setTooltip}
             >
-              neural crest cells
+              Neural crest cells
             </Term>{" "}
             are specified at the tips of the neural folds.
           </>,
@@ -894,7 +894,16 @@ function App() {
             </Term>
             .
           </>,
-          <>Neural crest cells begin epithelial-mesenchymal transition.</>,
+          <>
+            Neural crest cells begin{" "}
+            <Term
+              definition="A process where epithelial cells lose their polarity and cell-cell adhesion, becoming migratory mesenchymal cells."
+              setTooltip={setTooltip}
+            >
+              epithelial-mesenchymal transition
+            </Term>
+            .
+          </>,
           <>
             Intermediate mesoderm forms the{" "}
             <Term
