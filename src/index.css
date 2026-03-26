@@ -39,12 +39,12 @@ section {
 h1 {
   color: var(--text-h);
   font-weight: 500;
-  font-size: 100px;
+  font-size: 80px;
   margin-bottom: 40px;
 }
 
 .introText {
-  font-size: 40px;
+  font-size: 30px;
   color: black;
   margin-bottom: 30px;
 }
@@ -52,12 +52,12 @@ h1 {
 h2 {
   color: var(--text-h);
   font-weight: 500;
-  font-size: 70px;
+  font-size: 60px;
   margin-bottom: 30px;
 }
 
 .dayText {
-  font-size: 35px;
+  font-size: 28px;
   color: rgb(106, 106, 106);
   margin-bottom: 30px;
 }
@@ -65,7 +65,7 @@ h2 {
 h3 {
   color: var(--text-h);
   font-weight: 500;
-  font-size: 70px;
+  font-size: 60px;
   margin-bottom: 0px;
 }
 
