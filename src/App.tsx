@@ -1647,11 +1647,6 @@ function App() {
           </p>
 
           <p className="refText">
-            University of Toronto. <i>ANA301H1: Human Embryology</i>, instructed
-            by Prof. Tania Alexson
-          </p>
-
-          <p className="refText">
             Embryology.ch.{" "}
             <a href="https://embryology.ch/" target="_blank">
               https://embryology.ch/
